@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+wget -O- https://telegram.org/dl/desktop/linux | tar xJ -C /opt/ && ln -fs /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
+echo 'You can now type telegram-desktop to start Telegram'

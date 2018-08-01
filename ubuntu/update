@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+apt update && apt dist-upgrade -y
+if [ -x "$(command -v snap)" ]; then
+  snap refresh
+fi
+if [ -x "$(command -v flatpak)" ]; then
+  flatpak update -y
+fi
