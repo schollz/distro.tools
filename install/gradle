@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+version="$(wget -qO- https://services.gradle.org/versions/current | jq -r '.version')"
+echo "Installing Gradle $version..."
+wget "https://services.gradle.org/distributions/gradle-${version}-bin.zip" -O /tmp/gradle.zip
+rm -rf /opt/gradle/gradle-${version}
+unzip -q -d /opt/gradle /tmp/gradle.zip
+rm /tmp/gradle.zip
+ln -sf "/opt/gradle/gradle-${version}" /opt/gradle/latest
+printf "export GRADLE_HOME=/opt/gradle/latest\nexport PATH=\$PATH:\$GRADLE_HOME/bin\n" > /etc/profile.d/gradle.sh
+echo "Gradle installed, logout and login to use \"gradle\"."
