@@ -22,14 +22,14 @@ To add a script, just clone this [repository](https://github.com/jlelse/distro.t
 
 ## Overview of scripts
 
-These scripts are made to work with amd64 and aren't guaranteed not work with other architectures.
+These scripts are made to work with amd64 and aren't guaranteed to work with other architectures.
 
 ### All
 
-`install/golang` (sudo) - Install Go *(requires wget, tar)*
-`install/postman` (sudo) - Install Postman *(requires wget, tar)*
-`install/telegram` (sudo) - Install Telegram *(requires wget, tar)*
+`install/golang` (sudo) - Install Go *(requires wget, tar)*  
+`install/postman` (sudo) - Install Postman *(requires wget, tar)*  
+`install/telegram` (sudo) - Install Telegram *(requires wget, tar)*  
 
 ### Ubuntu
 
-`ubuntu/update` (sudo) - Update your Ubuntu system including Snaps and Flatpaks
+`ubuntu/update` (sudo) - Update your Ubuntu system including Snaps and Flatpaks  
