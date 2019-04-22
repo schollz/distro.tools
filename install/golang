@@ -5,9 +5,5 @@ wget "${url}" -O /tmp/go.tar.gz
 rm -rf /usr/local/go
 tar -C /usr/local -xzf /tmp/go.tar.gz
 rm /tmp/go.tar.gz
-if ! grep -q "/usr/local/go/bin" "$HOME/.profile"; then
-cat >> ~/.profile <<x
-# GO
-export PATH=\$PATH:/usr/local/go/bin:\$HOME/go/bin
-x
-fi
+printf "export PATH=\$PATH:/usr/local/go/bin:\$HOME/go/bin\n" > /etc/profile.d/golang.sh
+echo "Go installed, logout and login to use \"go\"."
