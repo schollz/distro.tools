@@ -1,0 +1,72 @@
+kind: pipeline
+name: golang
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: golang
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget tar && install/golang && source /etc/profile.d/golang.sh && go version"
+
+---
+
+kind: pipeline
+name: gradle
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: gradle
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget jq unzip default-jdk && install/gradle && source /etc/profile.d/gradle.sh && gradle --version"
+
+---
+
+kind: pipeline
+name: node
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: node
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget && install/node && node -v"
+
+---
+
+kind: pipeline
+name: postman
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: postman
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget tar && install/postman && command -v postman"
+
+---
+
+kind: pipeline
+name: telegram
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: telegram
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget tar xz-utils && install/telegram && command -v telegram-desktop"

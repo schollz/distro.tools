@@ -26,12 +26,18 @@ These scripts are made to work with amd64 and aren't guaranteed to work with oth
 
 ### All
 
+Scripts applicable on most distributions:
+
+#### Install
+
 `install/golang` (sudo) - Install Go *(requires wget, tar)*  
 `install/gradle` (sudo) - Install Gradle *(requires wget, jq, unzip)*  
 `install/node` (sudo) - Install NodeJS using n *(requires wget)*  
 `install/postman` (sudo) - Install Postman *(requires wget, tar)*  
-`install/telegram` (sudo) - Install Telegram *(requires wget, tar)*  
+`install/telegram` (sudo) - Install Telegram *(requires wget, tar, xz-utils)*  
 
 ### Ubuntu
+
+Scripts focused on Ubuntu and derivates:
 
 `ubuntu/update` (sudo) - Update your Ubuntu system including Snaps and Flatpaks  

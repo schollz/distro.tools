@@ -6,4 +6,5 @@ rm -rf /usr/local/go
 tar -C /usr/local -xzf /tmp/go.tar.gz
 rm /tmp/go.tar.gz
 printf "export PATH=\$PATH:/usr/local/go/bin:\$HOME/go/bin\n" > /etc/profile.d/golang.sh
+chmod +x /etc/profile.d/golang.sh
 echo "Go installed, logout and login to use \"go\"."
