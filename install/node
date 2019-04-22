@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+wget https://raw.githubusercontent.com/tj/n/master/bin/n -O /usr/local/bin/n
+chmod +x /usr/local/bin/n
+n latest
+echo "Latest NodeJS version installed. In the future you can use \"sudo n latest\" or \"sudo n lts\" to update to the latest or latest LTS version."
