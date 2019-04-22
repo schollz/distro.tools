@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+url="$(wget -qO- https://golang.org/dl/ | grep -oP 'https:\/\/dl\.google\.com\/go\/go([0-9\.]+)\.linux-amd64\.tar\.gz' | head -n 1 )"
+wget "${url}" -O /tmp/go.tar.gz
+rm -rf /usr/local/go
+tar -C /usr/local -xzf /tmp/go.tar.gz
+rm /tmp/go.tar.gz
+if ! grep -q "/usr/local/go/bin" "$HOME/.profile"; then
+cat >> ~/.profile <<x
+# GO
+export PATH=\$PATH:/usr/local/go/bin:\$HOME/go/bin
+x
+fi
