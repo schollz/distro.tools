@@ -6,11 +6,11 @@ This is a collection of shell scripts for easy management of your Linux install.
 
 It's simple. Just type this into your terminal and replace `script` with the script to execute:
 
-    curl -L distro.tools/script | sh
+    wget -qO- distro.tools/script | sh
 
 when the script doesn't need sudo, or
 
-    sudo sh -c 'curl -L distro.tools/script | sh'
+    sudo sh -c 'wget -qO- distro.tools/script | sh'
 
 when the script needs sudo privileges.
 
@@ -30,11 +30,11 @@ Scripts applicable on most distributions:
 
 #### Install
 
-`install/golang` (sudo) - Install Go *(requires wget, tar)*  
-`install/gradle` (sudo) - Install Gradle *(requires wget, jq, unzip)*  
-`install/node` (sudo) - Install NodeJS using n *(requires wget)*  
-`install/postman` (sudo) - Install Postman *(requires wget, tar)*  
-`install/telegram` (sudo) - Install Telegram *(requires wget, tar, xz-utils)*  
+`install/golang` (sudo) - Install Go *(requires tar)*  
+`install/gradle` (sudo) - Install Gradle *(requires jq, unzip)*  
+`install/node` (sudo) - Install NodeJS using n  
+`install/postman` (sudo) - Install Postman *(requires tar)*  
+`install/telegram` (sudo) - Install Telegram *(requires tar, xz-utils)*  
 
 ### Ubuntu
 
