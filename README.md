@@ -30,6 +30,7 @@ Scripts applicable on most distributions:
 
 #### Install
 
+`install/docker-compose` (sudo) - Install Docker Compose  
 `install/golang` (sudo) - Install Go *(requires tar)*  
 `install/gradle` (sudo) - Install Gradle *(requires jq, unzip)*  
 `install/node` (sudo) - Install NodeJS using n  

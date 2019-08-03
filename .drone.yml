@@ -1,4 +1,19 @@
 kind: pipeline
+name: docker-compose
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: docker-compose
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget && install/docker-compose && docker-compose version"
+
+---
+  
+kind: pipeline
 name: golang
 
 platform:
