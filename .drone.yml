@@ -44,6 +44,21 @@ steps:
 ---
 
 kind: pipeline
+name: lazygit
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: lazygit
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget tar && install/lazygit && lazygit -v"
+
+---
+
+kind: pipeline
 name: node
 
 platform:
