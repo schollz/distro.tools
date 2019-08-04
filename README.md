@@ -33,6 +33,7 @@ Scripts applicable on most distributions:
 `install/docker-compose` (sudo) - Install Docker Compose  
 `install/golang` (sudo) - Install Go *(requires tar)*  
 `install/gradle` (sudo) - Install Gradle *(requires jq, unzip)*  
+`install/hugo` (sudo) - Install Hugo (extended version) *(requires tar)*  
 `install/lazygit` (sudo) - Install lazygit *(requires tar)*  
 `install/node` (sudo) - Install NodeJS using n  
 `install/postman` (sudo) - Install Postman *(requires tar)*  

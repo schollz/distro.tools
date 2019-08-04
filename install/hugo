@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+wget -qO- https://api.github.com/repos/gohugoio/hugo/releases/latest \
+| grep "extended" \
+| grep "Linux-64bit.tar.gz" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -i - -O /tmp/hugo.tar.gz
+rm -rf /opt/hugo
+mkdir /opt/hugo
+tar -xf /tmp/hugo.tar.gz -C /opt/hugo/
+ln -fs /opt/hugo/hugo /usr/local/bin/hugo
+rm /tmp/hugo.tar.gz
+echo 'You can now type hugo to use Hugo'

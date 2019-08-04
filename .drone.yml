@@ -44,6 +44,21 @@ steps:
 ---
 
 kind: pipeline
+name: hugo
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: hugo
+  image: ubuntu:18.04
+  commands:
+  - /bin/bash -c "apt update && apt install -y wget tar && install/hugo && hugo version"
+
+---
+
+kind: pipeline
 name: lazygit
 
 platform:
