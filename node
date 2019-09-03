@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+url="$(wget -qO- https://nodejs.org/en/download/ | grep -oP  'https:\/\/nodejs.org\/dist\/v([0-9\.]+)\/node-v([0-9\.]+)-linux-x64.tar.xz'  | head -n1)"
+echo "getting ${url}"
+wget "${url}" -O /tmp/node.tar.xz
+rm -rf ~/node
+mkdir ~/node
+tar -xJf /tmp/node.tar.xz -C ~/node
+mv ~/node/node-*/* ~/node/
+mkdir ~/node/node_modules
+echo "export PATH=$PATH:$HOME/node/bin:$HOME/node/node_modules/bin" >> ~/.zshrc
+npm config set prefix "$HOME/node/node_modules"
+npm install -g npm
+npm -v
+node -v

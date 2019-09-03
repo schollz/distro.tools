@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-wget https://dl.pstmn.io/download/latest/linux -O /tmp/postman.tar.gz
-tar -xf /tmp/postman.tar.gz -C /opt/
-ln -fs /opt/Postman/Postman /usr/local/bin/postman
-rm /tmp/postman.tar.gz
-echo 'You can now type postman to start Postman'
