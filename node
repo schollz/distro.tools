@@ -6,6 +6,7 @@ wget "${url}" -O /tmp/node.tar.xz
 rm -rf ~/node
 mkdir ~/node
 tar -xJf /tmp/node.tar.xz -C ~/node
+rm /tmp/node.tar.xz
 mv ~/node/node-*/* ~/node/
 mkdir ~/node/node_modules
 echo "export PATH=$PATH:$HOME/node/bin:$HOME/node/node_modules/bin" >> ~/.zshrc
