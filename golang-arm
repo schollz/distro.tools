@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-url="$(wget -qO- https://golang.org/dl/ | grep -oP 'https:\/\/dl\.google\.com\/go\/go([0-9\.]+)\.linux-armv6l\.tar\.gz' | head -n 1 )"
-wget "${url}" -O /tmp/go.tar.gz
-sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf /tmp/go.tar.gz
-rm /tmp/go.tar.gz
-echo "Go installed, logout and login to use \"go\"."
