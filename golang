@@ -59,11 +59,21 @@ wget --progress=bar:force "${url}" -O /tmp/go.tar.gz 2>&1 | progressfilt
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf /tmp/go.tar.gz
 rm /tmp/go.tar.gz
+if [ -f ~/.zshrc ]; then
 if ! grep -q "/usr/local/go/bin" ~/.zshrc; then
 	echo "export GOPATH=\$HOME/go" >> ~/.zshrc
 	echo "export PATH=\$PATH:\$HOME/go/bin:/usr/local/go/bin" >> ~/.zshrc
 	echo "updated ~/.zshrc"
 fi
-echo "Go installed, logout and login to use \"go\"."
 source ~/.zshrc
+fi
+if [ -f ~/.bashrc ]; then
+if ! grep -q "/usr/local/go/bin" ~/.bashrc; then
+	echo "export GOPATH=\$HOME/go" >> ~/.bashrc
+	echo "export PATH=\$PATH:\$HOME/go/bin:/usr/local/go/bin" >> ~/.bashrc
+	echo "updated ~/.bashrc"
+fi
+source ~/.bashrc
+fi
+echo "Go installed, logout and login to use \"go\"."
 go version
